@@ -7,8 +7,7 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "wdio": "wdio run wdio.conf.js",
-        "deploy": "gh-pages -d build"
+        "wdio": "wdio run wdio.conf.js"
     },
     "dependencies": {
         "react": "^18.2.0",
