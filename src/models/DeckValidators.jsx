@@ -1,4 +1,5 @@
 import { buildHistoricalCardList } from "./Cards"
+import { ValidationResult } from "./ValidationResult"
 
 const MAIN_DECK_MIN = 40
 const MAIN_DECK_MAX = 60
@@ -34,7 +35,10 @@ class EnumeratedCardValidator {
                 validationErrors.push(`"${card.name}": allowed: ${allowed}, attempted: ${numAttempted}`)
             }
         }
-        return validationErrors
+        return new ValidationResult(
+            validationErrors.length == 0,
+            validationErrors
+        )
     }
 
     getNumAllowed(card) {

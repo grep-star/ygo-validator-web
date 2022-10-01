@@ -1,41 +1,26 @@
-import { useFilePicker } from 'use-file-picker'
+import { useRef } from 'react'
 import { Decklist } from '../models/Cards'
 
 function DeckValidator(props) {
-    const [openFileSelector, { filesContent, loading }] = useFilePicker({
-        accept: '.ydk',
-        limitFilesConfig: { max: 1 }
-    })
+    const fileReader = new FileReader()
+    const hiddenInput = useRef(null)
 
-    if (loading) {
-        return <div>Loading...</div>;
+    const updateParent = () => {
+        props.setValidationResult(props.validator.validate(Decklist.parseFromFile(fileReader.result)))
+    }
+
+    const processUpload = (event) => {
+        fileReader.onloadend = updateParent
+        fileReader.readAsText(event.target.files[0])
     }
 
     return (
         <div>
-            <button onClick={() => openFileSelector()} style={{ marginBottom: '1em' }}>Validate Decklist</button>
+            <button onClick={() => hiddenInput.current.click()} style={{ marginRight: '0.5em' }}>Validate Decklist</button>
+            <input type="file" accept='.ydk' ref={hiddenInput} style={{display:'none'}} onChange={processUpload} />
             <br />
-            {filesContent.map((file, index) => (
-                <div>
-                    <DeckValidationResult fileContent={file.content} validator={props.validator} />
-                </div>
-            ))}
         </div>
     )
 }
 
-function DeckValidationResult(props) {
-    const deck = Decklist.parseFromFile(props.fileContent)
-    const result = props.validator.validate(deck)
-    console.log(result)
-    return (
-        result.length > 0 ?
-            (
-                result.map(err => (
-                    <div key={err}>{err}</div>
-                ))
-            ) : <div>"Looks good to me!"</div>
-    )
-}
-
-export { DeckValidator, DeckValidationResult }
+export { DeckValidator }

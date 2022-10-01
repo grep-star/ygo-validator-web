@@ -9,6 +9,8 @@ import { FormatCategory } from './models/FormatCategory'
 import { goatFormat } from './models/HistoricalFormatSpec'
 import { HISTORICAL, WAVE_MOTION } from './Constants'
 import { Customization } from './components/Customization'
+import { EdoBanlistGenerator } from './components/EdoBanlistGenerator'
+import { ValidationResult } from './components/ValidationResult'
 
 function App() {
     const [mode, setMode] = useState()
@@ -19,8 +21,10 @@ function App() {
     const [waveMotionCenter, setWaveMotionCenter] = useState(null)
     const [waveMotionSpec, setWaveMotionSpec] = useState(null)
     const [historicalFormat, setHistoricalFormat] = useState(null)
+    const [validationResult, setValidationResult] = useState(null)
 
     const updateFormatCategory = (category) => {
+        setValidationResult(null)
         const formatCategory = availableFormats[category]
         setMode(formatCategory.mode)
         setValidator(formatCategory.defaultValidator)
@@ -29,6 +33,7 @@ function App() {
     }
 
     const setupWaveMotion = (center, allowSpeedDuel) => {
+        setValidationResult(null)
         const compiled = WaveMotionSpec.compileFormat(center, allowSpeedDuel)
         setWaveMotionSpec(compiled)
         setCustomizationViable(true)
@@ -48,6 +53,7 @@ function App() {
     }
 
     const updateTraditional = () => {
+        setValidationResult(null)
         const updatedState = !traditional
         setTraditional(updatedState)
         if (validator != null) {
@@ -85,7 +91,11 @@ function App() {
                 updateTraditional={updateTraditional}
             />
             {customizationViable ? <CollapsibleFormatDetails mode={mode} waveMotionSpec={waveMotionSpec} formatSpec={historicalFormat} traditional={traditional} /> : null}
-            {customizationViable ? <DeckValidator validator={validator} /> : null}
+            <div className="flex-grid">
+                {customizationViable ? <DeckValidator validator={validator} setValidationResult={setValidationResult} /> : null}
+                {customizationViable ? <EdoBanlistGenerator mode={mode} waveMotionSpec={waveMotionSpec} /> : null}
+            </div>
+            {validationResult != null ? <ValidationResult result={validationResult} /> : null}
         </div>
     )
 }

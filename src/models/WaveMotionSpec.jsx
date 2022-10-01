@@ -9,9 +9,10 @@ function filterSpeedDuel(sets) {
 }
 
 class WaveMotionSpec {
-    constructor(setClassifications, cardMap) {
+    constructor(setClassifications, cardMap, setCode) {
         this.setClassifications = setClassifications
         this.cardMap = cardMap
+        this.setCode = setCode
     }
 
     static compileFormat(centerSetName, allowSpeedDuel) {
@@ -47,7 +48,7 @@ class WaveMotionSpec {
                 })
             })
         }
-        return new WaveMotionSpec(setsAllowed, cardMap)
+        return new WaveMotionSpec(setsAllowed, cardMap, centerSet.set_code)
     }
 }
 
