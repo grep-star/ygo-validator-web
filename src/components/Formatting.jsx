@@ -9,6 +9,8 @@ const selectStyle = {
       })
 }
 
+const separator = { render : function() { return <hr key="separator" className="solid" style={{ marginRight: '1em' }} /> }}
+
 function TitledColumn(props) {
     const objs = props.objects || []
     if (props.items) {
@@ -20,19 +22,25 @@ function TitledColumn(props) {
         objs.length > 0 ?
             (<div className='col'>
                 <div><em>{props.title}</em></div>
-                <hr className="solid" style={{ marginRight: '1em' }} />
+                {separator.render()}
                 {objs.map(item => (
-                    <div key={item.content} className={item.className}>{item.content}</div>
+                    item.render()
                 ))}
             </div>) : null
     )
 }
 
 class RenderableDiv {
-    constructor(content, className) {
+    constructor(content, className, link = null) {
         this.content = content
-        this.className = className
+        this.className = className,
+        this.link = link
+    }
+
+    render() {
+        const innerContent = this.link ? (<a href={this.link} target="_blank">{this.content}</a>) : this.content
+        return (<div key={this.content} className={this.className}>{innerContent}</div>)
     }
 }
 
-export { selectStyle, TitledColumn, RenderableDiv }
+export { selectStyle, TitledColumn, RenderableDiv, separator }

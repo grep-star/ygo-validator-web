@@ -27,10 +27,38 @@
   color: orange
 }
 
+.card-ritual {
+  color: rgb(67, 192, 234)
+}
+
+.card-synchro {
+  color: white
+}
+
+.card-fusion {
+  color: #bc8df6
+}
+
 .card-trap {
   color: #ff80ff
 }
 
 .card-spell {
   color: #90EE90
+}
+
+.set-core {
+  color: rgb(143, 215, 239)
+}
+
+.set-deck {
+  color: #e4aae4
+}
+
+.set-side {
+  color: rgb(235, 178, 138)
+}
+
+.set-promo {
+  color: rgb(161, 233, 143)
 }

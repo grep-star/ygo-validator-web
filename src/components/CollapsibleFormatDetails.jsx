@@ -3,7 +3,7 @@ import { React } from 'react'
 import useCollapse from 'react-collapsed'
 import { HISTORICAL, WAVE_MOTION } from '../Constants'
 import { lookupCardByName } from '../models/Cards'
-import { RenderableDiv, TitledColumn } from './Formatting'
+import { RenderableDiv, separator, TitledColumn } from './Formatting'
 
 function CollapsibleFormatDetails(props) {
     const { getCollapseProps, getToggleProps, isExpanded } = useCollapse()
@@ -36,9 +36,9 @@ function WaveMotionDetails(props) {
     const setsAllowed = props.waveMotionSpec?.setClassifications
     return (setsAllowed != null ?
         <div className="flex-grid">
-            <TitledColumn items={mapSets(setsAllowed['3'])} title={'Unlimited'} />
-            <TitledColumn items={mapSets(setsAllowed['2'])} title={'Semi-Limited'} />
-            <TitledColumn items={mapSets(setsAllowed['1'])} title={'Limited'} />
+            <TitledColumn objects={mapSets(setsAllowed['3'], true)} title={'Unlimited'} />
+            <TitledColumn objects={mapSets(setsAllowed['2'])} title={'Semi-Limited'} />
+            <TitledColumn objects={mapSets(setsAllowed['1'])} title={'Limited'} />
         </div> : null
     )
 }
@@ -56,12 +56,30 @@ function HistoricalDetails(props) {
 
 function mapCardNamesToRenderables(cardNames) {
     return cardNames.map(cardName => (
-        new RenderableDiv(cardName, lookupCardByName(cardName).mapToDomClass())
+        new RenderableDiv(cardName, lookupCardByName(cardName).mapToDomClass(), yugipediaLink(cardName))
     ))
 }
 
-function mapSets(sets) {
-    return(sets.map(set => set.set_name))
+function mapSets(sets, addLegend = false) {
+    const formatClassName = (classType) => (
+        `set-${classType}`
+    )
+    const renderables = sets.map(set => (
+        new RenderableDiv(set.set_name, formatClassName(set.set_type), yugipediaLink(set.set_name))
+    ))
+    if (addLegend) {
+        renderables.push(separator)
+        renderables.push(new RenderableDiv("Legend:", null))
+        renderables.push(new RenderableDiv("Core Sets", formatClassName('core')))
+        renderables.push(new RenderableDiv("Side Sets", formatClassName('side')))
+        renderables.push(new RenderableDiv("Decks", formatClassName('deck')))
+        renderables.push(new RenderableDiv("Promos/Other", formatClassName('promo')))
+    }
+    return renderables
+}
+
+function yugipediaLink(page) {
+    return `https://yugipedia.com/wiki/${page.split(' ').join('_')}`
 }
 
 export { CollapsibleFormatDetails }

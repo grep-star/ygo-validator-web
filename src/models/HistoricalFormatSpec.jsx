@@ -1,4 +1,5 @@
 import goatSpec from '../specs/goat.json'
+import edisonSpec from '../specs/edison.json'
 
 class HistoricalFormatSpec {
     constructor(name, spec) {
@@ -11,5 +12,6 @@ class HistoricalFormatSpec {
 }
 
 const goatFormat = new HistoricalFormatSpec('GOAT', goatSpec)
+const edisonFormat = new HistoricalFormatSpec('Edison', edisonSpec)
 
-export { HistoricalFormatSpec, goatFormat }
+export { HistoricalFormatSpec, goatFormat, edisonFormat }

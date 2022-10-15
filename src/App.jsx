@@ -6,7 +6,7 @@ import { CollapsibleFormatDetails } from './components/CollapsibleFormatDetails'
 import { DeckValidator } from './components/DeckValidation'
 import { EnumeratedCardValidator, HistoricalFormatValidator } from './models/DeckValidators'
 import { FormatCategory } from './models/FormatCategory'
-import { goatFormat } from './models/HistoricalFormatSpec'
+import { goatFormat, edisonFormat } from './models/HistoricalFormatSpec'
 import { HISTORICAL, WAVE_MOTION } from './Constants'
 import { Customization } from './components/Customization'
 import { EdoBanlistGenerator } from './components/EdoBanlistGenerator'
@@ -72,6 +72,12 @@ function App() {
             HISTORICAL,
             goatFormat,
             new HistoricalFormatValidator(goatFormat),
+            false
+        ),
+        'Edison': new FormatCategory(
+            HISTORICAL,
+            edisonFormat,
+            new HistoricalFormatValidator(edisonFormat),
             false
         )
     }
