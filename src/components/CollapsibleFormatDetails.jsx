@@ -72,6 +72,7 @@ function mapSets(sets, addLegend = false) {
         renderables.push(new RenderableDiv("Legend:", null))
         renderables.push(new RenderableDiv("Core Sets", formatClassName('core')))
         renderables.push(new RenderableDiv("Side Sets", formatClassName('side')))
+        renderables.push(new RenderableDiv("Deck Build Packs", formatClassName('deckbuild')))
         renderables.push(new RenderableDiv("Decks", formatClassName('deck')))
         renderables.push(new RenderableDiv("Promos/Other", formatClassName('promo')))
     }

@@ -1,8 +1,15 @@
 [
   {
+    "set_name": "Battles of Legend: Crystal Revenge",
+    "set_code": "BLCR",
+    "num_of_cards": 105,
+    "tcg_date": null,
+    "set_type": "promo"
+  },
+  {
     "set_name": "OTS Tournament Pack 20",
     "set_code": "OP20",
-    "num_of_cards": 26,
+    "num_of_cards": 27,
     "tcg_date": null,
     "set_type": "promo"
   },
@@ -4860,7 +4867,7 @@
     "num_of_cards": 60,
     "tcg_date": "2017-11-16",
     "center_valid": true,
-    "set_type": "side"
+    "set_type": "deckbuild"
   },
   {
     "set_name": "Kaiba's Collector Box",
@@ -5048,7 +5055,7 @@
     "num_of_cards": 60,
     "tcg_date": "2018-05-24",
     "center_valid": true,
-    "set_type": "side"
+    "set_type": "deckbuild"
   },
   {
     "set_name": "The Lost Art Promotion E",
@@ -5237,7 +5244,7 @@
     "num_of_cards": 60,
     "tcg_date": "2018-11-15",
     "center_valid": true,
-    "set_type": "side"
+    "set_type": "deckbuild"
   },
   {
     "set_name": "Weekly Shonen Jump November 2018 membership promotional card",
@@ -5373,7 +5380,7 @@
     "num_of_cards": 60,
     "tcg_date": "2019-03-21",
     "center_valid": true,
-    "set_type": "side"
+    "set_type": "deckbuild"
   },
   {
     "set_name": "Speed Duel: Arena of Lost Souls",
@@ -5648,7 +5655,7 @@
     "num_of_cards": 60,
     "tcg_date": "2019-11-22",
     "center_valid": true,
-    "set_type": "side"
+    "set_type": "deckbuild"
   },
   {
     "set_name": "Speed Duel: Trials of the Kingdom Sneak Peek participation cards",
@@ -5778,7 +5785,7 @@
     "num_of_cards": 60,
     "tcg_date": "2020-04-03",
     "center_valid": true,
-    "set_type": "side"
+    "set_type": "deckbuild"
   },
   {
     "set_name": "Structure Deck: Mechanized Madness",
@@ -6084,7 +6091,7 @@
     "num_of_cards": 60,
     "tcg_date": "2020-12-03",
     "center_valid": true,
-    "set_type": "side"
+    "set_type": "deckbuild"
   },
   {
     "set_name": "Yu-Gi-Oh! at Home Sweepstakes",
@@ -6172,7 +6179,7 @@
     "num_of_cards": 60,
     "tcg_date": "2021-04-29",
     "center_valid": true,
-    "set_type": "side"
+    "set_type": "deckbuild"
   },
   {
     "set_name": "The Lost Art Promotion 2021 E",
@@ -6374,7 +6381,7 @@
   {
     "set_name": "The Lost Art Promotion 2022",
     "set_code": "LART",
-    "num_of_cards": 7,
+    "num_of_cards": 8,
     "tcg_date": "2022-01-01",
     "set_type": "promo"
   },
@@ -6391,7 +6398,7 @@
     "num_of_cards": 60,
     "tcg_date": "2022-01-27",
     "center_valid": true,
-    "set_type": "side"
+    "set_type": "deckbuild"
   },
   {
     "set_name": "Battle of Chaos",
@@ -6443,6 +6450,7 @@
     "set_code": "DIFO",
     "num_of_cards": 101,
     "tcg_date": "2022-05-19",
+    "center_valid": true,
     "set_type": "core"
   },
   {
@@ -6457,6 +6465,7 @@
     "set_code": "LED9",
     "num_of_cards": 57,
     "tcg_date": "2022-06-16",
+    "center_valid": true,
     "set_type": "side"
   },
   {
@@ -6471,6 +6480,7 @@
     "set_code": "LDS3",
     "num_of_cards": 138,
     "tcg_date": "2022-07-21",
+    "center_valid": true,
     "set_type": "side"
   },
   {
@@ -6485,7 +6495,7 @@
     "set_code": "TAMA",
     "num_of_cards": 60,
     "tcg_date": "2022-08-25",
-    "set_type": "side"
+    "set_type": "deckbuild"
   },
   {
     "set_name": "2022 Tin of the Pharaoh's Gods",
@@ -6504,8 +6514,15 @@
   {
     "set_name": "Darkwing Blast",
     "set_code": "DABL",
-    "num_of_cards": 90,
+    "num_of_cards": 101,
     "tcg_date": "2022-10-20",
     "set_type": "core"
+  },
+  {
+    "set_name": "Magnificent Mavens",
+    "set_code": "MAMA",
+    "num_of_cards": 112,
+    "tcg_date": "2022-11-03",
+    "set_type": "side"
   }
 ]

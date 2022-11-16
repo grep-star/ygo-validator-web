@@ -18,6 +18,7 @@ function App() {
     const [validator, setValidator] = useState()
     const [traditional, setTraditional] = useState(false)
     const [speedDuelAllowed, setSpeedDuelAllowed] = useState(false)
+    const [deckbuildAsCore, setDeckbuildAsCore] = useState(true)
     const [waveMotionCenter, setWaveMotionCenter] = useState(null)
     const [waveMotionSpec, setWaveMotionSpec] = useState(null)
     const [historicalFormat, setHistoricalFormat] = useState(null)
@@ -32,24 +33,31 @@ function App() {
         setHistoricalFormat(formatCategory.formatSpec)
     }
 
-    const setupWaveMotion = (center, allowSpeedDuel) => {
+    const setupWaveMotion = (center, allowSpeedDuel, deckbuild) => {
         setValidationResult(null)
-        const compiled = WaveMotionSpec.compileFormat(center, allowSpeedDuel)
+        const compiled = WaveMotionSpec.compileFormat(center, allowSpeedDuel, deckbuild)
         setWaveMotionSpec(compiled)
         setCustomizationViable(true)
         setWaveMotionCenter(center)
         setSpeedDuelAllowed(allowSpeedDuel)
+        setDeckbuildAsCore(deckbuild)
         setValidator(new EnumeratedCardValidator(compiled.cardMap))
     }
 
     const updateWaveMotionSet = (centerSet) => {
-        setupWaveMotion(centerSet, speedDuelAllowed)
+        setupWaveMotion(centerSet, speedDuelAllowed, deckbuildAsCore)
     }
 
     const updateSpeedDuel = () => {
         const updatedState = !speedDuelAllowed
         setSpeedDuelAllowed(updatedState)
-        setupWaveMotion(waveMotionCenter, updatedState)
+        setupWaveMotion(waveMotionCenter, updatedState, deckbuildAsCore)
+    }
+
+    const updateDeckbuildAsCore = () => {
+        const updatedState = !deckbuildAsCore
+        setDeckbuildAsCore(updatedState)
+        setupWaveMotion(waveMotionCenter, speedDuelAllowed, updatedState)
     }
 
     const updateTraditional = () => {
@@ -92,6 +100,8 @@ function App() {
                 mode={mode}
                 allowSpeedDuel={speedDuelAllowed}
                 updateSpeedDuel={updateSpeedDuel}
+                deckbuildAsCore={deckbuildAsCore}
+                updateDeckbuild={updateDeckbuildAsCore}
                 updateCenter={updateWaveMotionSet}
                 traditional={traditional}
                 updateTraditional={updateTraditional}

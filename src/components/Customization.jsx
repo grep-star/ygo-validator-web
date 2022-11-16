@@ -20,8 +20,12 @@ function Customization(props) {
                     <div style={{ display: 'inline-block', width: '500px', marginRight: '0.5em' }}>
                         <Select options={opts} onChange={handleChange} styles={selectStyle} placeholder="Select a center set" />
                     </div>
-                    <input type="checkbox" checked={props.allowSpeedDuel} onChange={props.updateSpeedDuel} id="speed-duel" />
-                    <label htmlFor="speed-duel">Allow Speed Duel sets?</label>
+                    <div>
+                        <input type="checkbox" checked={props.allowSpeedDuel} onChange={props.updateSpeedDuel} id="speed-duel" />
+                        <label htmlFor="speed-duel">Allow Speed Duel sets?</label>
+                        <input type="checkbox" checked={props.deckbuildAsCore} onChange={props.updateDeckbuild} id="deckbuild" style={{marginLeft: '1em'}} />
+                        <label htmlFor="deckbuild">Handle deck build sets as core sets?</label>
+                    </div>
                 </>
             )
         case HISTORICAL:

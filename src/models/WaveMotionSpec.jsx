@@ -8,6 +8,10 @@ function filterSpeedDuel(sets) {
     return sets.filter(set => !set.set_name.includes("Speed Duel"))
 }
 
+function sortOnDate(sets) {
+    return sets.sort((a, b) => (a.tcg_date < b.tcg_date) ? -1 : (a.tcg_date > b.tcg_date) ? 1 : 0)
+}
+
 class WaveMotionSpec {
     constructor(setClassifications, cardMap, setCode) {
         this.setClassifications = setClassifications
@@ -15,10 +19,17 @@ class WaveMotionSpec {
         this.setCode = setCode
     }
 
-    static compileFormat(centerSetName, allowSpeedDuel) {
+    static compileFormat(centerSetName, allowSpeedDuel, deckbuildAsCore) {
         const centerSet = cardSets.find(set => set.set_name === centerSetName)
-        const candidateCoreSets = allowSpeedDuel ? coreSets : filterSpeedDuel(coreSets)
-        const candidateNoncoreSets = allowSpeedDuel ? noncoreSets : filterSpeedDuel(noncoreSets)
+        let candidateCoreSets = allowSpeedDuel ? coreSets : filterSpeedDuel(coreSets)
+        let candidateNoncoreSets = allowSpeedDuel ? noncoreSets : filterSpeedDuel(noncoreSets)
+        if (deckbuildAsCore) {
+            const deckbuild = candidateNoncoreSets.filter(set => set.set_type === 'deckbuild')
+            candidateCoreSets.push(...deckbuild)
+            candidateNoncoreSets = candidateNoncoreSets.filter(set => !deckbuild.includes(set))
+            candidateCoreSets = sortOnDate(candidateCoreSets)
+            candidateNoncoreSets = sortOnDate(candidateNoncoreSets)
+        }
         const previousCoreSets = candidateCoreSets.filter(set => set.tcg_date <= centerSet.tcg_date && set.set_name != centerSetName)
         const followingCoreSets = candidateCoreSets.filter(set => set.tcg_date > centerSet.tcg_date)
         const earliestCoreSet = previousCoreSets[previousCoreSets.length - 2]
