@@ -1,20 +1,20 @@
 [
   {
-    "set_name": "Battles of Legend: Crystal Revenge",
-    "set_code": "BLCR",
-    "num_of_cards": 105,
+    "set_name": "Adidas collaboration card",
+    "set_code": "ADC1",
+    "num_of_cards": 1,
     "tcg_date": null,
     "set_type": "promo"
   },
   {
-    "set_name": "OTS Tournament Pack 20",
-    "set_code": "OP20",
-    "num_of_cards": 27,
+    "set_name": "The Lost Art Promotion 2023 G",
+    "set_code": "LART",
+    "num_of_cards": 1,
     "tcg_date": null,
     "set_type": "promo"
   },
   {
-    "set_name": "The Lost Art Promotion 2022 K",
+    "set_name": "The Lost Art Promotion 2023 I",
     "set_code": "LART",
     "num_of_cards": 1,
     "tcg_date": null,
@@ -481,7 +481,7 @@
   },
   {
     "set_name": "Structure Deck: Deluxe Edition",
-    "set_code": "SD1",
+    "set_code": "SD2",
     "num_of_cards": 2,
     "tcg_date": "2005-01-01",
     "set_type": "promo"
@@ -596,7 +596,7 @@
   },
   {
     "set_name": "Dark Beginning 2",
-    "set_code": "DB",
+    "set_code": "DB2",
     "num_of_cards": 264,
     "tcg_date": "2005-07-27",
     "center_valid": true,
@@ -2563,7 +2563,7 @@
     "set_type": "deck"
   },
   {
-    "set_name": "Yu-Gi-Oh! 5D's Tag Force 5 promotional cards",
+    "set_name": "Yu-Gi-Oh! 5D's Tag Force 5 Promotional Cards",
     "set_code": "TF05",
     "num_of_cards": 3,
     "tcg_date": "2010-10-26",
@@ -5813,7 +5813,7 @@
     "set_name": "Speed Duel Starter Decks: Match of the Millennium",
     "set_code": "SS04",
     "num_of_cards": 67,
-    "tcg_date": "2020-05-15",
+    "tcg_date": "2020-05-14",
     "set_type": "deck"
   },
   {
@@ -6403,7 +6403,7 @@
   {
     "set_name": "Battle of Chaos",
     "set_code": "BACH",
-    "num_of_cards": 101,
+    "num_of_cards": 102,
     "tcg_date": "2022-02-10",
     "center_valid": true,
     "set_type": "core"
@@ -6422,6 +6422,13 @@
     "tcg_date": "2022-02-24",
     "center_valid": true,
     "set_type": "side"
+  },
+  {
+    "set_name": "Speed Duel GX: Duel Academy Box",
+    "set_code": "SGX1",
+    "num_of_cards": 218,
+    "tcg_date": "2022-03-17",
+    "set_type": "promo"
   },
   {
     "set_name": "Speed Duel Tournament Pack 3",
@@ -6488,6 +6495,7 @@
     "set_code": "POTE",
     "num_of_cards": 101,
     "tcg_date": "2022-08-04",
+    "center_valid": true,
     "set_type": "core"
   },
   {
@@ -6495,6 +6503,7 @@
     "set_code": "TAMA",
     "num_of_cards": 60,
     "tcg_date": "2022-08-25",
+    "center_valid": true,
     "set_type": "deckbuild"
   },
   {
@@ -6502,6 +6511,14 @@
     "set_code": "MP22",
     "num_of_cards": 275,
     "tcg_date": "2022-09-14",
+    "center_valid": true,
+    "set_type": "side"
+  },
+  {
+    "set_name": "Speed Duel Tournament Pack 4",
+    "set_code": "STP4",
+    "num_of_cards": 35,
+    "tcg_date": "2022-09-29",
     "set_type": "side"
   },
   {
@@ -6512,17 +6529,242 @@
     "set_type": "deck"
   },
   {
+    "set_name": "The Lost Art Promotion 2022 K",
+    "set_code": "LART",
+    "num_of_cards": 1,
+    "tcg_date": "2022-10-01",
+    "set_type": "promo"
+  },
+  {
+    "set_name": "Speed Duel GX: Midterm Paradox",
+    "set_code": "SGX2",
+    "num_of_cards": 110,
+    "tcg_date": "2022-10-06",
+    "center_valid": true,
+    "set_type": "side"
+  },
+  {
+    "set_name": "Yu-Gi-Oh! Championship Series 2022 prize card",
+    "set_code": "YCSW",
+    "num_of_cards": 1,
+    "tcg_date": "2022-10-16",
+    "set_type": "promo"
+  },
+  {
     "set_name": "Darkwing Blast",
     "set_code": "DABL",
     "num_of_cards": 101,
     "tcg_date": "2022-10-20",
+    "center_valid": true,
     "set_type": "core"
+  },
+  {
+    "set_name": "OTS Tournament Pack 20",
+    "set_code": "OP20",
+    "num_of_cards": 27,
+    "tcg_date": "2022-10-20",
+    "set_type": "side"
   },
   {
     "set_name": "Magnificent Mavens",
     "set_code": "MAMA",
-    "num_of_cards": 112,
+    "num_of_cards": 114,
     "tcg_date": "2022-11-03",
+    "center_valid": true,
     "set_type": "side"
+  },
+  {
+    "set_name": "Battles of Legend: Crystal Revenge",
+    "set_code": "BLCR",
+    "num_of_cards": 105,
+    "tcg_date": "2022-11-17",
+    "center_valid": true,
+    "set_type": "side"
+  },
+  {
+    "set_name": "Structure Deck: Dark World",
+    "set_code": "SR13",
+    "num_of_cards": 45,
+    "tcg_date": "2022-12-01",
+    "set_type": "deck"
+  },
+  {
+    "set_name": "Amazing Defenders",
+    "set_code": "AMDE",
+    "num_of_cards": 60,
+    "tcg_date": "2023-01-19",
+    "center_valid": true,
+    "set_type": "deckbuild"
+  },
+  {
+    "set_name": "OTS Tournament Pack 21",
+    "set_code": "OP21",
+    "num_of_cards": 26,
+    "tcg_date": "2023-02-09",
+    "set_type": "side"
+  },
+  {
+    "set_name": "Photon Hypernova",
+    "set_code": "PHHY",
+    "num_of_cards": 101,
+    "tcg_date": "2023-02-09",
+    "center_valid": true,
+    "set_type": "core"
+  },
+  {
+    "set_name": "Structure Deck: Beware of Traptrix",
+    "set_code": "SDBT",
+    "num_of_cards": 46,
+    "tcg_date": "2023-02-23",
+    "set_type": "deck"
+  },
+  {
+    "set_name": "Maze of Memories",
+    "set_code": "MAZE",
+    "num_of_cards": 67,
+    "tcg_date": "2023-03-09",
+    "center_valid": true,
+    "set_type": "side"
+  },
+  {
+    "set_name": "Speed Duel Tournament Pack 5",
+    "set_code": "STP5",
+    "num_of_cards": 35,
+    "tcg_date": "2023-03-09",
+    "set_type": "side"
+  },
+  {
+    "set_name": "Speed Duel GX: Duelists of Shadows",
+    "set_code": "SGX3",
+    "num_of_cards": 221,
+    "tcg_date": "2023-03-30",
+    "center_valid": true,
+    "set_type": "side"
+  },
+  {
+    "set_name": "The Lost Art Promotion 2023 D",
+    "set_code": "LART",
+    "num_of_cards": 1,
+    "tcg_date": "2023-04-01",
+    "set_type": "promo"
+  },
+  {
+    "set_name": "Legendary Collection: 25th Anniversary Edition",
+    "set_code": "LC01",
+    "num_of_cards": 3,
+    "tcg_date": "2023-04-20",
+    "set_type": "promo"
+  },
+  {
+    "set_name": "The Lost Art Promotion 2023 E",
+    "set_code": "LART",
+    "num_of_cards": 1,
+    "tcg_date": "2023-05-01",
+    "set_type": "promo"
+  },
+  {
+    "set_name": "Cyberstorm Access",
+    "set_code": "CYAC",
+    "num_of_cards": 101,
+    "tcg_date": "2023-05-04",
+    "set_type": "core"
+  },
+  {
+    "set_name": "The Lost Art Promotion 2023 F",
+    "set_code": "LART",
+    "num_of_cards": 1,
+    "tcg_date": "2023-06-01",
+    "set_type": "promo"
+  },
+  {
+    "set_name": "Wild Survivors",
+    "set_code": "WISU",
+    "num_of_cards": 60,
+    "tcg_date": "2023-06-01",
+    "set_type": "deckbuild"
+  },
+  {
+    "set_name": "Battles of Legend: Monstrous Revenge",
+    "set_code": "BLMR",
+    "num_of_cards": 104,
+    "tcg_date": "2023-06-22",
+    "set_type": "side"
+  },
+  {
+    "set_name": "OTS Tournament Pack 22",
+    "set_code": "OP22",
+    "num_of_cards": 25,
+    "tcg_date": "2023-07-19",
+    "set_type": "side"
+  },
+  {
+    "set_name": "Duelist Nexus",
+    "set_code": "DUNE",
+    "num_of_cards": 99,
+    "tcg_date": "2023-07-27",
+    "set_type": "core"
+  },
+  {
+    "set_name": "The Lost Art Promotion 2023 H",
+    "set_code": "LART",
+    "num_of_cards": 1,
+    "tcg_date": "2023-08-01",
+    "set_type": "promo"
+  },
+  {
+    "set_name": "Legendary Duelists: Soulburning Volcano",
+    "set_code": "LD10",
+    "num_of_cards": 62,
+    "tcg_date": "2023-08-10",
+    "set_type": "side"
+  },
+  {
+    "set_name": "Speed Duel: Streets of Battle City",
+    "set_code": "SBC1",
+    "num_of_cards": 193,
+    "tcg_date": "2023-08-24",
+    "set_type": "side"
+  },
+  {
+    "set_name": "The Pot Collection",
+    "set_code": "TBC1",
+    "num_of_cards": 15,
+    "tcg_date": "2023-09-01",
+    "set_type": "promo"
+  },
+  {
+    "set_name": "The Lost Art Promotion 2023",
+    "set_code": "LART",
+    "num_of_cards": 2,
+    "tcg_date": "2023-09-04",
+    "set_type": "promo"
+  },
+  {
+    "set_name": "Speed Duel Tournament Pack 6",
+    "set_code": "STP6",
+    "num_of_cards": 35,
+    "tcg_date": "2023-09-06",
+    "set_type": "side"
+  },
+  {
+    "set_name": "25th Anniversary Tin: Dueling Heroes",
+    "set_code": "TN23",
+    "num_of_cards": 16,
+    "tcg_date": "2023-09-07",
+    "set_type": "promo"
+  },
+  {
+    "set_name": "25th Anniversary Tin: Dueling Heroes Mega Pack",
+    "set_code": "MP23",
+    "num_of_cards": 283,
+    "tcg_date": "2023-09-07",
+    "set_type": "side"
+  },
+  {
+    "set_name": "Structure Deck: The Crimson King",
+    "set_code": "SDCK",
+    "num_of_cards": 46,
+    "tcg_date": "2023-09-21",
+    "set_type": "deck"
   }
 ]
