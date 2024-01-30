@@ -1,14 +1,13 @@
-import { WAVE_MOTION } from '../Constants'
+import { WAVE_MOTION, ERA } from '../Constants'
 
 function EdoBanlistGenerator(props) {
-    const generateBanlist = () => {
-        const id = `WaveMotion_${props.waveMotionSpec.setCode}`
+    const generateBanlist = (id, cardMap) => {
         const content = [
             `#[${id}]`,
             `!${id}`,
             '$whitelist'
         ]
-        for (const [card, numPermitted] of props.waveMotionSpec.cardMap.entries()) {
+        for (const [card, numPermitted] of cardMap.entries()) {
             card.ids.forEach(id => {
                 content.push(`${id} ${numPermitted} -- ${card.name}`)
             })
@@ -21,8 +20,16 @@ function EdoBanlistGenerator(props) {
         tempElement.click()
     }
 
+    const generateWaveMotionBanlist = () => {
+        generateBanlist(`WaveMotion_${props.waveMotionSpec.setCode}`, props.waveMotionSpec.cardMap)
+    }
+
+    const generateEraBanlist = () => {
+        generateBanlist(`UnlimitedEra_${props.eraSpec.firstSetCode}_to_${props.eraSpec.lastSetCode}`, props.eraSpec.cardMap)
+    }
+
     return (
-        props.mode === WAVE_MOTION ? <button onClick={generateBanlist}>Generate EDOPro Banlist</button> : null
+        [WAVE_MOTION, ERA].includes(props.mode) ? <button onClick={props.mode === WAVE_MOTION ? generateWaveMotionBanlist : generateEraBanlist}>Generate Banlist File</button> : null
     )
 }
 

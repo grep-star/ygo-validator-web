@@ -7,10 +7,11 @@ import { DeckValidator } from './components/DeckValidation'
 import { EnumeratedCardValidator, HistoricalFormatValidator } from './models/DeckValidators'
 import { FormatCategory } from './models/FormatCategory'
 import { goatFormat, edisonFormat } from './models/HistoricalFormatSpec'
-import { HISTORICAL, WAVE_MOTION } from './Constants'
+import { HISTORICAL, WAVE_MOTION, ERA } from './Constants'
 import { Customization } from './components/Customization'
 import { EdoBanlistGenerator } from './components/EdoBanlistGenerator'
 import { ValidationResult } from './components/ValidationResult'
+import { UnlimitedEraSpec } from './models/UnlimitedEraSpec'
 
 function App() {
     const [mode, setMode] = useState()
@@ -21,6 +22,9 @@ function App() {
     const [deckbuildAsCore, setDeckbuildAsCore] = useState(true)
     const [waveMotionCenter, setWaveMotionCenter] = useState(null)
     const [waveMotionSpec, setWaveMotionSpec] = useState(null)
+    const [eraFirstSet, setEraFirstSet] = useState(null)
+    const [eraLastSet, setEraLastSet] = useState(null)
+    const [eraSpec, setEraSpec] = useState(null)
     const [historicalFormat, setHistoricalFormat] = useState(null)
     const [validationResult, setValidationResult] = useState(null)
 
@@ -69,6 +73,26 @@ function App() {
         }
     }
 
+    const setupEraFormat = (firstSet, lastSet) => {
+        setValidationResult(null)
+        setEraFirstSet(firstSet)
+        setEraLastSet(lastSet)
+        if (firstSet !== null && lastSet !== null) {
+            const compiled = UnlimitedEraSpec.compileFormat(firstSet, lastSet)
+            setCustomizationViable(true)
+            setValidator(new EnumeratedCardValidator(compiled.cardMap))
+            setEraSpec(compiled)
+        }
+    }
+
+    const updateEraFirstSet = (firstSet) => {
+        setupEraFormat(firstSet, eraLastSet)
+    }
+
+    const updateEraLastSet = (lastSet) => {
+        setupEraFormat(eraFirstSet, lastSet)
+    }
+
     const availableFormats = {
         'WaveMotion': new FormatCategory(
             WAVE_MOTION,
@@ -87,6 +111,12 @@ function App() {
             edisonFormat,
             new HistoricalFormatValidator(edisonFormat),
             false
+        ),
+        'Unlimited Era': new FormatCategory(
+            ERA,
+            null,
+            null,
+            true
         )
     }
 
@@ -105,11 +135,13 @@ function App() {
                 updateCenter={updateWaveMotionSet}
                 traditional={traditional}
                 updateTraditional={updateTraditional}
+                updateEraFirstSet={updateEraFirstSet}
+                updateEraLastSet={updateEraLastSet}
             />
             {customizationViable ? <CollapsibleFormatDetails mode={mode} waveMotionSpec={waveMotionSpec} formatSpec={historicalFormat} traditional={traditional} /> : null}
             <div className="flex-grid">
                 {customizationViable ? <DeckValidator validator={validator} setValidationResult={setValidationResult} /> : null}
-                {customizationViable ? <EdoBanlistGenerator mode={mode} waveMotionSpec={waveMotionSpec} /> : null}
+                {customizationViable ? <EdoBanlistGenerator mode={mode} waveMotionSpec={waveMotionSpec} eraSpec={eraSpec} /> : null}
             </div>
             {validationResult != null ? <ValidationResult result={validationResult} /> : null}
         </div>

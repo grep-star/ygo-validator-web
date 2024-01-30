@@ -1,16 +1,36 @@
 import { useState, React } from 'react'
-import { HISTORICAL, WAVE_MOTION } from '../Constants'
+import { ERA, HISTORICAL, WAVE_MOTION } from '../Constants'
 import cardSets from '../specs/card_sets.json'
 import { selectStyle } from './Formatting'
 import Select from 'react-select'
+import { sortSetsOnDate } from '../models/Cards'
+
+function mapSetForDisplay(cardSet) {
+    return { value: cardSet.set_name, label: `${cardSet.set_name} (${cardSet.set_code})` }
+}
 
 const opts = cardSets.filter(cardSet => cardSet.center_valid).map(cardSet => (
-    { value: cardSet.set_name, label: `${cardSet.set_name} (${cardSet.set_code})` }
+    mapSetForDisplay(cardSet)
 ))
+
+const eraSets = sortSetsOnDate(cardSets)
+    .filter(cardSet => cardSet.tcg_date !== null)
+    .map(cardSet => (
+        mapSetForDisplay(cardSet)
+    )
+)
 
 function Customization(props) {
     const handleChange = (event) => {
         props.updateCenter(event.value)
+    }
+
+    const changeEarliest = (event) => {
+        props.updateEraFirstSet(event.value)
+    }
+
+    const changeLatest = (event) => {
+        props.updateEraLastSet(event.value)
     }
 
     switch (props.mode) {
@@ -34,6 +54,13 @@ function Customization(props) {
                     <input type="checkbox" checked={props.traditional} onChange={props.updateTraditional} id="traditional" />
                     <label htmlFor="traditional">Traditional?</label>
                 </>
+            )
+        case ERA:
+            return (
+                <div style={{ display: 'inline-block', width: '500px', marginRight: '0.5em' }}>
+                        <Select options={eraSets} onChange={changeEarliest} styles={selectStyle} placeholder="Select the earliest set" />
+                        <Select options={eraSets} onChange={changeLatest} styles={selectStyle} placeholder="Select the latest set" />
+                </div>
             )
         default:
             return null

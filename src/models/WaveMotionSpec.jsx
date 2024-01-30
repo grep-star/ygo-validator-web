@@ -1,16 +1,12 @@
 import cardSets from '../specs/card_sets.json'
-import { identifyCardsInSet } from './Cards'
+import { identifyCardsInSet, sortSetsOnDate } from './Cards'
 
-const coreSets = sortOnDate(cardSets.filter(set => set.set_type === 'core'))
+const coreSets = sortSetsOnDate(cardSets.filter(set => set.set_type === 'core'))
 const noncoreSets = cardSets.filter(set => !coreSets.includes(set))
 const tcgStart = coreSets[0].tcg_date
 
 function filterSpeedDuel(sets) {
     return sets.filter(set => !set.set_name.includes("Speed Duel"))
-}
-
-function sortOnDate(sets) {
-    return sets.sort((a, b) => (a.tcg_date < b.tcg_date) ? -1 : (a.tcg_date > b.tcg_date) ? 1 : 0)
 }
 
 class WaveMotionSpec {
@@ -28,8 +24,8 @@ class WaveMotionSpec {
             const deckbuild = candidateNoncoreSets.filter(set => set.set_type === 'deckbuild')
             candidateCoreSets.push(...deckbuild)
             candidateNoncoreSets = candidateNoncoreSets.filter(set => !deckbuild.includes(set))
-            candidateCoreSets = sortOnDate(candidateCoreSets)
-            candidateNoncoreSets = sortOnDate(candidateNoncoreSets)
+            candidateCoreSets = sortSetsOnDate(candidateCoreSets)
+            candidateNoncoreSets = sortSetsOnDate(candidateNoncoreSets)
         }
         const previousCoreSets = candidateCoreSets.filter(set => set.tcg_date <= centerSet.tcg_date && set.set_name != centerSetName)
         const followingCoreSets = candidateCoreSets.filter(set => set.tcg_date > centerSet.tcg_date)

@@ -103,4 +103,8 @@ function lookupCardByName(cardName) {
     return allKnownCards.find(card => card.name === cardName)
 }
 
-export { Decklist, identifyCardsInSet, buildHistoricalCardList, lookupCardByName }
+function sortSetsOnDate(sets) {
+    return sets.sort((a, b) => (a.tcg_date < b.tcg_date) ? -1 : (a.tcg_date > b.tcg_date) ? 1 : 0)
+}
+
+export { Decklist, identifyCardsInSet, buildHistoricalCardList, lookupCardByName, sortSetsOnDate }

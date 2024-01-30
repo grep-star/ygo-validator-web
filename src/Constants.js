@@ -1,5 +1,6 @@
 const HISTORICAL = 'historical'
 const WAVE_MOTION = 'wave_motion'
+const ERA = 'era'
 const FUSION = 'fusion'
 const SYNCHRO = 'synchro'
 const XYZ = 'xyz'
@@ -11,4 +12,4 @@ const TRAP = 'trap'
 const EFFECT = 'effect'
 const NORMAL = 'normal'
 
-export { HISTORICAL, WAVE_MOTION, FUSION, SYNCHRO, XYZ, PENDULUM, LINK, RITUAL, SPELL, TRAP, EFFECT, NORMAL }
+export { HISTORICAL, WAVE_MOTION, ERA, FUSION, SYNCHRO, XYZ, PENDULUM, LINK, RITUAL, SPELL, TRAP, EFFECT, NORMAL }
