@@ -1,22 +1,15 @@
 [
   {
-    "set_name": "Adidas collaboration card",
-    "set_code": "ADC1",
+    "set_name": "EFootball collaboration cards",
+    "set_code": "EFC1",
     "num_of_cards": 1,
     "tcg_date": null,
     "set_type": "promo"
   },
   {
-    "set_name": "The Lost Art Promotion 2023 G",
-    "set_code": "LART",
-    "num_of_cards": 1,
-    "tcg_date": null,
-    "set_type": "promo"
-  },
-  {
-    "set_name": "The Lost Art Promotion 2023 I",
-    "set_code": "LART",
-    "num_of_cards": 1,
+    "set_name": "Nike collaboration cards",
+    "set_code": "NKC1",
+    "num_of_cards": 2,
     "tcg_date": null,
     "set_type": "promo"
   },
@@ -484,7 +477,7 @@
   },
   {
     "set_name": "Structure Deck: Deluxe Edition",
-    "set_code": "SD2",
+    "set_code": "SD1",
     "num_of_cards": 2,
     "tcg_date": "2005-01-01",
     "set_type": "promo"
@@ -2739,7 +2732,7 @@
   },
   {
     "set_name": "Duelist Pack Collection Tin 2011",
-    "set_code": "DPC5",
+    "set_code": "DPCT",
     "num_of_cards": 4,
     "tcg_date": "2011-03-31",
     "set_type": "promo"
@@ -4997,8 +4990,8 @@
   },
   {
     "set_name": "Yugi & Kaiba Collector Box",
-    "set_code": "YUCB",
-    "num_of_cards": 2,
+    "set_code": "KACB",
+    "num_of_cards": 1,
     "tcg_date": "2018-03-29",
     "set_type": "promo"
   },
@@ -5816,7 +5809,7 @@
     "set_name": "Speed Duel Starter Decks: Match of the Millennium",
     "set_code": "SS04",
     "num_of_cards": 67,
-    "tcg_date": "2020-05-14",
+    "tcg_date": "2020-05-15",
     "set_type": "deck"
   },
   {
@@ -6354,7 +6347,7 @@
   {
     "set_name": "Maximum Gold: El Dorado",
     "set_code": "MGED",
-    "num_of_cards": 151,
+    "num_of_cards": 152,
     "tcg_date": "2021-11-18",
     "center_valid": true,
     "set_type": "side"
@@ -6431,7 +6424,8 @@
     "set_code": "SGX1",
     "num_of_cards": 218,
     "tcg_date": "2022-03-17",
-    "set_type": "promo"
+    "center_valid": true,
+    "set_type": "side"
   },
   {
     "set_name": "Speed Duel Tournament Pack 3",
@@ -6670,6 +6664,7 @@
     "set_code": "CYAC",
     "num_of_cards": 101,
     "tcg_date": "2023-05-04",
+    "center_valid": true,
     "set_type": "core"
   },
   {
@@ -6684,6 +6679,7 @@
     "set_code": "WISU",
     "num_of_cards": 60,
     "tcg_date": "2023-06-01",
+    "center_valid": true,
     "set_type": "deckbuild"
   },
   {
@@ -6691,6 +6687,7 @@
     "set_code": "BLMR",
     "num_of_cards": 104,
     "tcg_date": "2023-06-22",
+    "center_valid": true,
     "set_type": "side"
   },
   {
@@ -6705,6 +6702,7 @@
     "set_code": "DUNE",
     "num_of_cards": 99,
     "tcg_date": "2023-07-27",
+    "center_valid": true,
     "set_type": "core"
   },
   {
@@ -6719,6 +6717,7 @@
     "set_code": "LD10",
     "num_of_cards": 62,
     "tcg_date": "2023-08-10",
+    "center_valid": true,
     "set_type": "side"
   },
   {
@@ -6726,7 +6725,15 @@
     "set_code": "SBC1",
     "num_of_cards": 193,
     "tcg_date": "2023-08-24",
+    "center_valid": true,
     "set_type": "side"
+  },
+  {
+    "set_name": "The Lost Art Promotion 2023 I",
+    "set_code": "LART",
+    "num_of_cards": 1,
+    "tcg_date": "2023-09-01",
+    "set_type": "promo"
   },
   {
     "set_name": "The Pot Collection",
@@ -6738,7 +6745,7 @@
   {
     "set_name": "The Lost Art Promotion 2023",
     "set_code": "LART",
-    "num_of_cards": 2,
+    "num_of_cards": 5,
     "tcg_date": "2023-09-04",
     "set_type": "promo"
   },
@@ -6761,13 +6768,363 @@
     "set_code": "MP23",
     "num_of_cards": 283,
     "tcg_date": "2023-09-07",
+    "center_valid": true,
     "set_type": "side"
   },
   {
     "set_name": "Structure Deck: The Crimson King",
     "set_code": "SDCK",
-    "num_of_cards": 46,
+    "num_of_cards": 49,
     "tcg_date": "2023-09-21",
     "set_type": "deck"
+  },
+  {
+    "set_name": "Yu-Gi-Oh! Championship Series 2023 prize card",
+    "set_code": "YCSW",
+    "num_of_cards": 1,
+    "tcg_date": "2023-10-01",
+    "set_type": "promo"
+  },
+  {
+    "set_name": "Age of Overlord",
+    "set_code": "AGOV",
+    "num_of_cards": 101,
+    "tcg_date": "2023-10-19",
+    "center_valid": true,
+    "set_type": "core"
+  },
+  {
+    "set_name": "OTS Tournament Pack 23",
+    "set_code": "OP23",
+    "num_of_cards": 27,
+    "tcg_date": "2023-10-25",
+    "set_type": "side"
+  },
+  {
+    "set_name": "25th Anniversary Rarity Collection",
+    "set_code": "RA01",
+    "num_of_cards": 78,
+    "tcg_date": "2023-11-02",
+    "center_valid": true,
+    "set_type": "side"
+  },
+  {
+    "set_name": "Valiant Smashers",
+    "set_code": "VASM",
+    "num_of_cards": 60,
+    "tcg_date": "2023-11-16",
+    "center_valid": true,
+    "set_type": "deckbuild"
+  },
+  {
+    "set_name": "Structure Deck: Fire Kings",
+    "set_code": "SR14",
+    "num_of_cards": 48,
+    "tcg_date": "2023-12-07",
+    "set_type": "deck"
+  },
+  {
+    "set_name": "The Lost Art Promotion 2024",
+    "set_code": "LART",
+    "num_of_cards": 5,
+    "tcg_date": "2024-01-01",
+    "set_type": "promo"
+  },
+  {
+    "set_name": "Maze of Millennia",
+    "set_code": "MZMI",
+    "num_of_cards": 85,
+    "tcg_date": "2024-01-18",
+    "center_valid": true,
+    "set_type": "side"
+  },
+  {
+    "set_name": "2-Player Starter Set",
+    "set_code": "STAX",
+    "num_of_cards": 88,
+    "tcg_date": "2024-01-26",
+    "center_valid": true,
+    "set_type": "side"
+  },
+  {
+    "set_name": "Phantom Nightmare",
+    "set_code": "PHNI",
+    "num_of_cards": 101,
+    "tcg_date": "2024-02-08",
+    "center_valid": true,
+    "set_type": "core"
+  },
+  {
+    "set_name": "Adidas collaboration card",
+    "set_code": "ADC1",
+    "num_of_cards": 1,
+    "tcg_date": "2024-02-14",
+    "set_type": "promo"
+  },
+  {
+    "set_name": "OTS Tournament Pack 24",
+    "set_code": "OP24",
+    "num_of_cards": 27,
+    "tcg_date": "2024-02-14",
+    "set_type": "side"
+  },
+  {
+    "set_name": "The Lost Art Promotion 2023 G",
+    "set_code": "LART",
+    "num_of_cards": 1,
+    "tcg_date": "2024-02-14",
+    "set_type": "promo"
+  },
+  {
+    "set_name": "Battles of Legend: Chapter 1",
+    "set_code": "BLC1",
+    "num_of_cards": 163,
+    "tcg_date": "2024-02-22",
+    "center_valid": true,
+    "set_type": "side"
+  },
+  {
+    "set_name": "25th Anniversary Ultimate Kaiba Set",
+    "set_code": "KC01",
+    "num_of_cards": 62,
+    "tcg_date": "2024-03-01",
+    "center_valid": true,
+    "set_type": "side"
+  },
+  {
+    "set_name": "Legacy of Destruction",
+    "set_code": "LEDE",
+    "num_of_cards": 101,
+    "tcg_date": "2024-04-25",
+    "center_valid": true,
+    "set_type": "core"
+  },
+  {
+    "set_name": "The Lost Art Promotion 2024 A",
+    "set_code": "LART",
+    "num_of_cards": 1,
+    "tcg_date": "2024-05-22",
+    "set_type": "promo"
+  },
+  {
+    "set_name": "25th Anniversary Rarity Collection II",
+    "set_code": "RA02",
+    "num_of_cards": 79,
+    "tcg_date": "2024-05-23",
+    "center_valid": true,
+    "set_type": "side"
+  },
+  {
+    "set_name": "OTS Tournament Pack 25",
+    "set_code": "OP25",
+    "num_of_cards": 27,
+    "tcg_date": "2024-06-12",
+    "set_type": "side"
+  },
+  {
+    "set_name": "The Lost Art Promotion 2024 B",
+    "set_code": "LART",
+    "num_of_cards": 1,
+    "tcg_date": "2024-06-19",
+    "set_type": "promo"
+  },
+  {
+    "set_name": "Battles of Legend: Terminal Revenge",
+    "set_code": "BLTR",
+    "num_of_cards": 118,
+    "tcg_date": "2024-06-20",
+    "center_valid": true,
+    "set_type": "side"
+  },
+  {
+    "set_name": "The Lost Art Promotion 2024 C",
+    "set_code": "LART",
+    "num_of_cards": 1,
+    "tcg_date": "2024-07-17",
+    "set_type": "promo"
+  },
+  {
+    "set_name": "The Infinite Forbidden",
+    "set_code": "INFO",
+    "num_of_cards": 101,
+    "tcg_date": "2024-07-18",
+    "center_valid": true,
+    "set_type": "core"
+  },
+  {
+    "set_name": "25th Anniversary Tin: Dueling Mirrors",
+    "set_code": "MP24",
+    "num_of_cards": 398,
+    "tcg_date": "2024-09-19",
+    "center_valid": true,
+    "set_type": "side"
+  },
+  {
+    "set_name": "Rage of the Abyss",
+    "set_code": "ROTA",
+    "num_of_cards": 101,
+    "tcg_date": "2024-10-10",
+    "center_valid": true,
+    "set_type": "core"
+  },
+  {
+    "set_name": "OTS Tournament Pack 26",
+    "set_code": "OP26",
+    "num_of_cards": 29,
+    "tcg_date": "2024-10-17",
+    "set_type": "side"
+  },
+  {
+    "set_name": "Quarter Century Bonanza",
+    "set_code": "RA03",
+    "num_of_cards": 276,
+    "tcg_date": "2024-11-07",
+    "center_valid": true,
+    "set_type": "side"
+  },
+  {
+    "set_name": "Crossover Breakers",
+    "set_code": "CRBR",
+    "num_of_cards": 60,
+    "tcg_date": "2024-12-05",
+    "center_valid": true,
+    "set_type": "deckbuild"
+  },
+  {
+    "set_name": "The Lost Art Promotion 2024 H",
+    "set_code": "LART",
+    "num_of_cards": 1,
+    "tcg_date": "2024-12-18",
+    "set_type": "promo"
+  },
+  {
+    "set_name": "Supreme Darkness",
+    "set_code": "SUDA",
+    "num_of_cards": 101,
+    "tcg_date": "2025-01-23",
+    "center_valid": true,
+    "set_type": "core"
+  },
+  {
+    "set_name": "Structure Deck: Blue-Eyes White Destiny",
+    "set_code": "SDWD",
+    "num_of_cards": 43,
+    "tcg_date": "2025-02-13",
+    "set_type": "deck"
+  },
+  {
+    "set_name": "OTS Tournament Pack 27",
+    "set_code": "OP27",
+    "num_of_cards": 27,
+    "tcg_date": "2025-02-27",
+    "set_type": "side"
+  },
+  {
+    "set_name": "Maze of the Master",
+    "set_code": "MZTM",
+    "num_of_cards": 111,
+    "tcg_date": "2025-03-13",
+    "center_valid": true,
+    "set_type": "side"
+  },
+  {
+    "set_name": "Quarter Century Stampede",
+    "set_code": "RA04",
+    "num_of_cards": 296,
+    "tcg_date": "2025-04-10",
+    "center_valid": true,
+    "set_type": "side"
+  },
+  {
+    "set_name": "Alliance Insight",
+    "set_code": "ALIN",
+    "num_of_cards": 100,
+    "tcg_date": "2025-05-01",
+    "center_valid": true,
+    "set_type": "core"
+  },
+  {
+    "set_name": "OTS Tournament Pack 28",
+    "set_code": "OP28",
+    "num_of_cards": 27,
+    "tcg_date": "2025-06-18",
+    "set_type": "side"
+  },
+  {
+    "set_name": "Duelist's Advance",
+    "set_code": "DUAD",
+    "num_of_cards": 48,
+    "tcg_date": "2025-07-03",
+    "set_type": "core"
+  },
+  {
+    "set_name": "The Lost Art Promotion 2025 A",
+    "set_code": "LART",
+    "num_of_cards": 1,
+    "tcg_date": "2025-07-16",
+    "set_type": "promo"
+  },
+  {
+    "set_name": "Justice Hunters",
+    "set_code": "JUSH",
+    "num_of_cards": 60,
+    "tcg_date": "2025-07-31",
+    "set_type": "deckbuild"
+  },
+  {
+    "set_name": "The Lost Art Promotion 2025 B",
+    "set_code": "LART",
+    "num_of_cards": 1,
+    "tcg_date": "2025-08-20",
+    "set_type": "promo"
+  },
+  {
+    "set_name": "Battles of Legend: Monster Mayhem",
+    "set_code": "BLMM",
+    "num_of_cards": 176,
+    "tcg_date": "2025-08-28",
+    "set_type": "side"
+  },
+  {
+    "set_name": "WCS 2025 Limited Pack",
+    "set_code": "25LP",
+    "num_of_cards": 1,
+    "tcg_date": "2025-08-30",
+    "set_type": "promo"
+  },
+  {
+    "set_name": "2025 Mega-Pack Tin",
+    "set_code": "MP25",
+    "num_of_cards": 450,
+    "tcg_date": "2025-09-04",
+    "set_type": "side"
+  },
+  {
+    "set_name": "The Lost Art Promotion 2025 C",
+    "set_code": "LART",
+    "num_of_cards": 1,
+    "tcg_date": "2025-09-17",
+    "set_type": "promo"
+  },
+  {
+    "set_name": "Doom of Dimensions",
+    "set_code": "DOOD",
+    "num_of_cards": 98,
+    "tcg_date": "2025-09-25",
+    "set_type": "core"
+  },
+  {
+    "set_name": "OTS Tournament Pack 29",
+    "set_code": "OP29",
+    "num_of_cards": 27,
+    "tcg_date": "2025-10-15",
+    "set_type": "side"
+  },
+  {
+    "set_name": "The Lost Art Promotion 2025 D",
+    "set_code": "LART",
+    "num_of_cards": 1,
+    "tcg_date": "2025-10-15",
+    "set_type": "promo"
   }
 ]
